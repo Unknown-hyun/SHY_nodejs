@@ -16,4 +16,4 @@ app.get("/", (req, res) => {
 
 app.listen(port, (req, res) => {
   console.log(port + " 서버");
-});
+}); //안녕
