@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      legend {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .id {
+        margin-left: 58px;
+        margin-bottom: 5px;
+      }
+      .password {
+        margin-left: 10px;
+        margin-bottom: 5px;
+      }
+      .name {
+        margin-left: 42px;
+        margin-bottom: 5px;
+      }
+      .email {
+        margin-left: 34px;
+        margin-bottom: 5px;
+      }
+      button {
+        background-color: rgb(218, 222, 226);
+        border: 1px solid black;
+        color: #000;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      button:hover {
+        background-color: rgb(182, 76, 76);
+      }
+      body {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <legend>J O I N</legend>
+    <form action="data" id="dataForm">
+      <label for="name">ID </label>
+      <input class="id" type="ID" id="ID" name="ID" /><br />
+      <label for="password">Password </label>
+      <input
+        class="password"
+        type="Password"
+        id="Password"
+        name="Password"
+      /><br />
+      <label for="name">Name </label>
+      <input class="name" type="text" id="Name" name="Name" /><br />
+      <label for="name">Email </label>
+      <input class="email" type="text" id="email" name="email" /><br />
+      <button type="submit">Join</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
