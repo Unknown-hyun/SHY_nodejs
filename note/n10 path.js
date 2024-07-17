@@ -1,5 +1,6 @@
 const express = require("express");
 const logger = require("morgan");
+const Session = require("express-session");
 const app = express();
 const port = 3000;
 
@@ -11,6 +12,7 @@ app.get("/", (req, res) => {
 
 app.get("/book/:uname/:bname/:pdate", (req, res) => {
   console.log(req.params);
+  console.log(req.session);
   console.log(req.params.uname);
   res.send(
     "<h2>저자 : " +
