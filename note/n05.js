@@ -3,7 +3,7 @@ const port = 3000;
 
 const server = http.createServer((req, res) => {
   res.setHeader("content-type", "text/plain; charset=utf-8");
-  const jsonData = require("./jsondata.json");
+  const jsonData = require("../jsondata.json");
   console.log(1, JSON.stringify(jsonData));
   req.end(JSON.stringify(jsonData, null, 2));
 });
