@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h2 {
+        width: 263px;
+        height: 35px;
+        text-align: center;
+        background-color: rgb(222, 183, 221);
+        margin: 0px;
+        color: white;
+      }
+      #wapper {
+        width: 263px;
+        height: 227px;
+        background-color: rgb(238, 216, 245);
+      }
+      [class] {
+        float: left;
+        width: 30px;
+        height: 30px;
+        border: 1px solid rgb(20, 20, 20);
+        border-collapse: collapse;
+        margin: 3px;
+        text-align: center;
+      }
+      div:nth-of-type(7n + 1) {
+        background-color: brown;
+      }
+      div:nth-of-type(7n + 7) {
+        background-color: rgb(42, 106, 165);
+      }
+      /* 구간 색깔 지정 */
+      div:nth-of-type(n + 2):nth-of-type(-n + 6) {
+        background-color: rgb(7, 118, 98);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>2024년 7월 달력</h2>
+    <div id="wapper">
+      <div class="box">일</div>
+      <div class="box">월</div>
+      <div class="box">화</div>
+      <div class="box">수</div>
+      <div class="box">목</div>
+      <div class="box">금</div>
+      <div class="box">토</div>
+      <div class="box"></div>
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
+      <div class="box">11</div>
+      <div class="box">12</div>
+      <div class="box">13</div>
+      <div class="box">14</div>
+      <div class="box">15</div>
+      <div class="box">16</div>
+      <div class="box">17</div>
+      <div class="box">18</div>
+      <div class="box">19</div>
+      <div class="box">20</div>
+      <div class="box">21</div>
+      <div class="box">22</div>
+      <div class="box">23</div>
+      <div class="box">24</div>
+      <div class="box">25</div>
+      <div class="box">26</div>
+      <div class="box">27</div>
+      <div class="box">28</div>
+      <div class="box">29</div>
+      <div class="box">30</div>
+      <div class="box">31</div>
+    </div>
+  </body>
+</html>

@@ -33,11 +33,11 @@ app.post("/login", (req, res) => {
   console.log(typeof username, username, typeof password, password); //test,1234
   // 정규표현식
   const idOK = /^[A-Za-z0-9]{1,8}$/g.test(username); // 방법1. true or false 반환, 속도 빠름
-  const pwOK = password.match(/^[A-Za-z0-9]{1,8}$/g); // 방법2. 정규표현식에 일치한 값
+  const pwOK = password.match(/^[A-Za-z0-9]{1,10}$/g); // 방법2. 정규표현식에 일치한 값
   console.log(idOK, pwOK, !!idOK, !!pwOK);
 
   if (idOK && !!pwOK) {
-    if (username == "test" && password == "1234") {
+    if (username == "admin" && password == "1234") {
       req.session.loggedIn = true;
       req.session.username = username;
       res.redirect("/");

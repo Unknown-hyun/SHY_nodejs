@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        margin-top: 10px;
+        background-color: rgb(156, 156, 244);
+      }
+      fieldset {
+        background-color: beige;
+        width: fit-content;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>MySQL</legend>
+      <form action="/data">
+        아이디 : <input type="text" name="id" /> <br />
+        이　름 : <input type="text" name="name" /> <br />
+        나　이 : <input type="text" name="age" /> <br />
+        이메일 : <input type="text" name="email" /><br />
+        <button type="submit">제출</button>
+        <button type="reset">내용지우기</button>
+        <button type="button" onclick="location.href='/list'">
+          리스트보기
+        </button>
+      </form>
+    </fieldset>
+  </body>
+</html>

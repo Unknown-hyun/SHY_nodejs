@@ -22,7 +22,7 @@ app.get("/data", (req, res) => {
   });
 });
 
-app.use("/list", express.static("/data/workspace_nodejs"));
+app.use("/list", express.static(__dirname + "/html"));
 app.get("/list", (req, res) => {
   fs.readdir("/data/workspace_nodejs", "utf-8", (err, data) => {
     let box = "<h1>File List</h1>";
