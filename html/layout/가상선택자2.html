@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p:first-child {
+        color: rgb(11, 1, 200);
+      }
+      p:first-child:after {
+        content: " 즐거워";
+      }
+      p:before,
+      p:after {
+        content: " ❤❤❤(●'◡'●)╰(*°▽°*)╯❤❤❤ ";
+      }
+      p:nth-child(n + 2):nth-child(-n + 4) {
+        color: blueviolet !important;
+      }
+      p:nth-child(n + 3):nth-child(-n + 4) {
+        color: red !important;
+      }
+      p:nth-last-child(3):after {
+        content: "😆";
+      }
+      p:last-child :after {
+        content: "😜😜😜";
+      }
+    </style>
+  </head>
+  <body>
+    <p>오늘이</p>
+    <p>더우면</p>
+    <p>내일도</p>
+    <p>물론</p>
+    <p>덥겠지</p>
+  </body>
+</html>

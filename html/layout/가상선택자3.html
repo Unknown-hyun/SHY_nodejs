@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상선택자</title>
+    <style>
+      li {
+        list-style: none;
+        padding: 0 15px;
+        float: left;
+      }
+      li:after {
+        content: "|";
+        float: right;
+        color: #ccc;
+        margin-right: -17px;
+      }
+      li:last-of-type::after {
+        content: "";
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>로그인</li>
+      <li>회원가입</li>
+      <li>마이페이지</li>
+      <li>사이트맵</li>
+      <li>고객센터</li>
+    </ul>
+  </body>
+</html>

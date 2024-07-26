@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹페이지 네비게이터</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const content = ["About", "Products", "Technology", "Downloads", "Etc"];
+        const color = [
+          "tomato",
+          "lightgreen",
+          "lightskyblue",
+          "yellow",
+          "pink",
+        ];
+        let button;
+        for (let i = content.length - 1; i >= 0; i--) {
+          button = document.createElement("button"); // <button></button>
+          //document.body.appendChild(button);
+          button.setAttribute("class", "tab"); // <body><button class= ""></button></body>
+          button.textContent = content[i];
+          let referenceNode = document.body.firstChild;
+          document.body.insertBefore(button, referenceNode);
+          // 페이지의 첫 번째 요소 // <body><button></button></body>
+        }
+
+        const bts = document.querySelectorAll("button");
+
+        bts.forEach((bt) => {
+          bt.addEventListener("click", (e) => {
+            const bds = document.getElementById(e.target.textContent);
+            if (bds.style.display == "block") {
+              bds.style.display = "none";
+            } else {
+              bds.style.display = "block";
+            }
+          });
+        });
+      });
+    </script>
+
+    <style>
+      #About {
+        display: block;
+      }
+      .tab {
+        background-color: #555;
+        color: #fff;
+        margin-top: 5px;
+        border: none;
+        /* display: none; */
+        outline: 0;
+        padding: 14px;
+        cursor: pointer;
+        font-size: 17px;
+        width: 20%;
+      }
+      .tab:hover {
+        background-color: rgb(105, 87, 64);
+      }
+      .content {
+        color: #fff;
+        background-color: tomato;
+        display: none;
+        padding: 50px;
+        text-align: center;
+        height: 100px;
+      }
+
+      #Products {
+        background-color: rgb(85, 162, 85);
+      }
+      #Technology {
+        background-color: lightskyblue;
+      }
+      #Downloads {
+        background-color: rgb(131, 131, 63);
+      }
+      #Etc {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div id="About" class="content">
+      <h1>About</h1>
+      <p>Custom Software Development Company</p>
+    </div>
+
+    <div id="Products" class="content">
+      <h1>Products</h1>
+      <p>
+        Building tailored software to address critical needs of global
+        enterprises.
+      </p>
+    </div>
+
+    <div id="Technology" class="content">
+      <h1>Technology</h1>
+      <p>Machine Learning, Artificial Intelligent, Cloud Platform.</p>
+    </div>
+
+    <div id="Downloads" class="content">
+      <h1>Downloads</h1>
+      <p>You can download a free 10 days trial.</p>
+    </div>
+
+    <div id="Etc" class="content">
+      <h1>Etc</h1>
+      <p>Everything is fine.</p>
+    </div>
+  </body>
+</html>

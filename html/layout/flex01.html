@@ -1,60 +1,76 @@
+<!-- 1.
+부모 display : flex
+자식 (생략가능, 비율) flex 1 1 0 -> 1 (늘어남, 줄어듬, 기본사이즈)
+2.
+개념축 : 주축, 교차축
+3.
+html, body {height : 100%} -->
+
 <!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./reset.css" />
     <style>
-      .ex-layout {
-        flex-direction: column;
-        height: 310px;
+      html,
+      body {
+        height: 100%;
       }
-      .menu {
-        width: 300px;
-        height: 40px;
-        border: 2px solid #09c;
+
+      div {
+        /* width: 100px; */
+        /* height: 100px; */
+        /* background-color: lightgray; */
+        border: 1px solid black;
+      }
+      .wrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .wrap > div:first-of-type {
+        height: 75px;
         background-color: beige;
       }
-      .main {
+      .wrap > div:nth-of-type(2) {
+        height: 70px;
+        box-shadow: 0 2px 2px 0 rgb(0, 0, 0, 0.3);
+        background-color: beidg;
+      }
+      .wrap > div:nth-of-type(3) {
         display: flex;
-        flex-direction: row;
+        height: 100%;
       }
-      .left-menu {
-        width: 50px;
-        height: 254px;
-        border: 2px solid red;
-        background-color: rgb(218, 218, 104);
+      .wrap > div > div {
+        flex: 1;
+        background-color: beige;
       }
-      .content {
-        display: flex;
-        flex-direction: column;
-        width: 250px;
-        /* border: 2px solid blue; */
-        background-color: antiquewhite;
+      .wrap > div > div:nth-of-type(n + 4) {
+        flex: 2 1 0;
+        /* (늘어남, 줄어듬, 기본값) */
+        background-color: bisque;
       }
-      .article {
-        height: 200px;
-        border: 2px solid blue;
-        background-color: gainsboro;
-      }
-      .comment {
-        height: 50px;
-        border: 2px solid purple;
-        background-color: lightcyan;
+      .wrap > div:last-of-type {
+        background-color: goldenrod;
+        height: 80px;
       }
     </style>
   </head>
   <body>
-    <!-- div.ex-layout>div.menu{global menu}+div.main>div.left-menu{left menu}+div.content>div.article{article}+div.comment{comment} -->
-    <div class="ex-layout">
-      <div class="menu">global menu</div>
-      <div class="main">
-        <div class="left-menu">left menu</div>
-        <div class="content">
-          <div class="article">article</div>
-          <div class="comment">comment</div>
-        </div>
+    <div class="wrap">
+      <div></div>
+      <div></div>
+      <div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
       </div>
+      <div></div>
     </div>
   </body>
 </html>
